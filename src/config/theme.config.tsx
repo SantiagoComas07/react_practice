@@ -1,11 +1,15 @@
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import React from "react";
 
+
+
+// Type children
 type ThemeProp = {
     children: React.ReactNode;
 };
 
 
+// This is my styles kind configuration
 export const themePalette ={
     BG:"#137EAD",
     GREEN:"#67E08A",
@@ -14,6 +18,7 @@ export const themePalette ={
 } as const;
 
 
+// Here I apply my styles kind configuration
 const theme = createTheme({
     palette:{
         mode:"dark",
@@ -40,6 +45,8 @@ const theme = createTheme({
     }
 });
 
+
+// Here there is mor configuration
 export const ThemeConfig = ({ children }: ThemeProp) => {
     return (
         <ThemeProvider theme={theme}>
